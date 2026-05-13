@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Style>
+        /* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Fieldset styling */
+fieldset {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: #764ba2;
+    box-shadow: 0 2px 8px rgba(118, 75, 162, 0.1);
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #764ba2;
+    padding: 0 12px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    letter-spacing: 0.5px;
+}
+
+/* Labels styling */
+label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.2);
+}
+
+/* Specific width for smaller inputs inline */
+input[type="tel"],
+input[type="email"] {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+}
+
+input[type="tel"] {
+    margin-right: 20px;
+}
+
+/* Radio and Checkbox styling */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+    accent-color: #764ba2;
+    cursor: pointer;
+}
+
+/* Gender section */
+fieldset:first-of-type label[for=""]:has(+ input[type="radio"]) {
+    margin-right: 15px;
+}
+
+/* City and State selects */
+select {
+    width: auto;
+    min-width: 150px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+label[for="city"],
+label[for="State"] {
+    margin-right: 10px;
+}
+
+/* Placeholder styling */
+input::placeholder {
+    color: #bbb;
+    font-style: italic;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+/* Button styling */
+button[type="submit"],
+input[type="reset"] {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(118, 75, 162, 0.4);
+}
+
+input[type="reset"] {
+    background: #f0f0f0;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+input[type="reset"]:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+/* Form footer buttons */
+form > input[type="reset"],
+form > button[type="submit"] {
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 650px) {
+    form {
+        padding: 20px;
+    }
+    
+    fieldset {
+        padding: 15px;
+    }
+    
+    input[type="tel"],
+    input[type="email"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    select {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    label[for="city"],
+    label[for="State"] {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    button[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Additional touch-ups */
+br {
+    line-height: 1.5;
+}
+
+/* Skills checkboxes spacing */
+fieldset:last-of-type label {
+    margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+fieldset:last-of-type input[type="checkbox"] {
+    margin-bottom: 5px;
+}
+
+/* Address label specific */
+label[for="Address"] {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* City and state inline on desktop */
+@media (min-width: 651px) {
+    label[for="city"],
+    label[for="State"] {
+        display: inline-block;
+    }
+    
+    select[name="city"],
+    select[name="state"] {
+        display: inline-block;
+    }
+}
+    </Style>
+</head>
+<body>
+    
+    <form>
+
+        <fieldset>
+            <legend>Name</legend>
+            <label for="">First Name</label><br>
+            <input type="text">
+            <br><br>
+            <label for="">Second Name</label><br>
+            <input type="text">
+            <br><br>
+            <label for="">Last Name</label><br>
+            <input type="text">
+            <br><br>
+            <label for="">DOB</label><br>
+            <input type="date">
+            
+            <br><br>
+
+            <input type="text"  placeholder="wanna ask something?">
+            <br><br>
+            <legend>Gender</legend>
+             <input type="radio" name="gender">
+            <label for="">MALE</label><br>
+             <input type="radio" name="gender">
+            <label for="">FEMALE</label>
+            <br><br>
+            <label for="">contact no</label>
+            <input type="tel">
+            <label for="">email</label>
+            <input type="email">
+            <br><br>
+            <label for="">Address</label><br>
+            
+            <textarea rows="4" cols="60"></textarea>
+            <br><br>
+            <label for="">city</label>
+            <select>
+                <option>Bengaluru</option>
+                <option>Dehli</option>
+                <option>Mumbai</option>
+                <option>pune</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+                <option>Gujarat</option>
+                <option>Coorg</option>
+            </select>
+
+            <label for="">State</label>
+            <select>
+                <option>Karnataka</option>
+                <option>Andrapradesh</option>
+                <option>Tamil nadu</option>
+                <option>Maharashtra</option>
+                <option>Kerala</option>
+                <option>uttar pradesh</option>
+                <option>Madhya pradesh</option>
+                <option>Rajasthan</option>
+                <option>panjab</option>
+                <option>west bengal</option>
+                <option>assam</option>
+                <option>meghalaya</option>
+                <option>bihar</option>
+                <option>Haryana</option>
+                <option>Kashmir</option>
+
+            </select>
+    
+        </fieldset>
+        <fieldset>
+
+            <legend>Skills</legend>
+            <input type="checkbox">
+            <label for="">HTML</label><br>
+             <input type="checkbox">
+            <label for="">CSS</label><br>
+             <input type="checkbox">
+            <label for="">JavaScript</label><br>
+             <input type="checkbox">
+            <label for="">Angular</label><br>
+             <input type="checkbox">
+            <label for="">TypeScript</label><br>
+
+        </fieldset>
+
+        <input type="reset">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p::first-letter{
+            color: brown;
+        }
+        p::first-line{
+            color: darkcyan;
+        }
+        p::before{
+            content:"hiii..." ;
+        }
+
+        p::after{
+            content: "thankyou..👍";
+        }
+
+        input{
+            color: crimson;
+        }
+
+        input::placeholder{
+
+            color:red;
+        }
+
+        li::marker{
+            color: darkblue;
+        }
+
+        ul li::marker{
+            content:"➡️";
+            font-size: 10px;
+        }
+
+        p::selection{
+
+            background-color: red;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A veniam eaque exercitationem nobis reprehenderit quidem rem odit provident quaerat quod, quos error architecto recusandae eos eveniet debitis labore cupiditate sunt ullam. Aspernatur sed labore veniam provident distinctio, eos ipsa veritatis sint, doloribus molestias, iure animi? Ratione, libero. Corrupti, voluptatibus provident!</p>
+
+    <input type="text" placeholder="enter you name">
+    <ol>
+        <li>hello</li>
+         <li>hello</li>
+          <li>hello</li>
+           <li>hello</li>
+    </ol>
+
+    <ul>
+         <li>hello</li>
+          <li>hello</li>
+           <li>hello</li>
+            <li>hello</li>
+    </ul>
+
+</body>
+</html>
